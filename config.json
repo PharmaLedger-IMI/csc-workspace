@@ -1,0 +1,9 @@
+{
+  "basePagesUrl": "/pages/",
+  "profile": {
+    "username": "Cardinal",
+    "email": "cardinal@axiologic.net",
+    "avatar": "/assets/images/cardinal.png"
+  },
+  "theme": "clear-sky-theme"
+}

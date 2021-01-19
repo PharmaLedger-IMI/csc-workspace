@@ -1,0 +1,64 @@
+{
+  "workDir": ".",
+  "dependencies": [
+    {
+      "name": "cardinal",
+      "src": "https://github.com/privatesky/cardinal.git",
+      "actions": [
+        {
+          "type": "smartClone",
+          "target": "./dev/",
+          "collectLog": false
+        },
+        {
+          "type": "execute",
+          "cmd": "cd ./dev/cardinal && npm install"
+        }
+      ]
+    },
+    {
+      "name": "clear-sky-theme",
+      "src": "https://github.com/PrivateSky/clear-sky-theme.git",
+      "actions": [
+        {
+          "type": "smartClone",
+          "target": "./dev/themes",
+          "collectLog": false
+        }
+      ]
+    }
+  ],
+  "build-cardinal": [
+    {
+      "name": "cardinal-build",
+      "src": "",
+      "actions": [
+        {
+          "type": "remove",
+          "target": "./cardinal"
+        },
+        {
+          "type": "execute",
+          "cmd": "cd dev/cardinal && npm run dist ../../"
+        }
+      ]
+    }
+  ],
+  "build-theme": [
+    {
+      "name": "clear-sky-theme-copy",
+      "src": "",
+      "actions": [
+        {
+          "type": "remove",
+          "target": "./themes/clear-sky-theme"
+        },
+        {
+          "type": "copy",
+          "src": "./dev/themes/clear-sky-theme/src",
+          "target": "./themes/clear-sky-theme"
+        }
+      ]
+    }
+  ]
+}

@@ -1,2 +1,2 @@
-# csc-workspace
+pwd# csc-workspace
 Clinical Supply Chain Workspace
