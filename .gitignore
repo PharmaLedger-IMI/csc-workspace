@@ -1,0 +1,19 @@
+
+## Default ignored files
+#/workspace.xml
+
+# Ignore everything
+.idea/csc-workspace.iml
+
+# But not these files...
+!.gitignore
+!bin
+!bin/**
+!octopus
+!octopus/*
+!LICENSE
+!package.json
+!package-lock.json
+!README.md
+!CHANGELOG
+!web-server/secure-channels/wallet-patch

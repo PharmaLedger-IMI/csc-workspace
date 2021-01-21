@@ -1,64 +1,325 @@
 {
-  "workDir": ".",
-  "dependencies": [
-    {
-      "name": "cardinal",
-      "src": "https://github.com/privatesky/cardinal.git",
-      "actions": [
+    "workDir": ".",
+    "dependencies": [
         {
-          "type": "smartClone",
-          "target": "./dev/",
-          "collectLog": false
+            "name": "privatesky",
+            "src": "http://github.com/privatesky/privatesky.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd privatesky && npm install"
+                },
+				{
+                    "type": "execute",
+                    "cmd": "cd privatesky && npm run build"
+                }
+            ]
         },
         {
-          "type": "execute",
-          "cmd": "cd ./dev/cardinal && npm install"
-        }
-      ]
-    },
-    {
-      "name": "clear-sky-theme",
-      "src": "https://github.com/PrivateSky/clear-sky-theme.git",
-      "actions": [
-        {
-          "type": "smartClone",
-          "target": "./dev/themes",
-          "collectLog": false
-        }
-      ]
-    }
-  ],
-  "build-cardinal": [
-    {
-      "name": "cardinal-build",
-      "src": "",
-      "actions": [
-        {
-          "type": "remove",
-          "target": "./cardinal"
+            "name": "cardinal",
+            "src": "http://github.com/privatesky/cardinal.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd cardinal && npm install"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd cardinal && npm run build"
+                }
+            ]
         },
         {
-          "type": "execute",
-          "cmd": "cd dev/cardinal && npm run dist ../../"
-        }
-      ]
-    }
-  ],
-  "build-theme": [
-    {
-      "name": "clear-sky-theme-copy",
-      "src": "",
-      "actions": [
-        {
-          "type": "remove",
-          "target": "./themes/clear-sky-theme"
+            "name": "menu-wallet-prototype",
+            "src": "http://github.com/privatesky/menu-wallet-prototype.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd menu-wallet-prototype && npm install"
+                }
+            ]
         },
         {
-          "type": "copy",
-          "src": "./dev/themes/clear-sky-theme/src",
-          "target": "./themes/clear-sky-theme"
+            "name": "profile-ssapp-prototype",
+            "src": "http://github.com/privatesky/profile-ssapp-prototype.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd profile-ssapp-prototype && npm install"
+                }
+            ]
+        },
+        {
+            "name": "secure-channels-ssapp-prototype",
+            "src": "http://github.com/privatesky/secure-channels-ssapp-prototype.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd secure-channels-ssapp-prototype && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/secure-channels/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/secure-channels/loader && npm install"
+                }
+            ]
+        },
+        {
+            "name": "dossier-explorer-wallet-prototype",
+            "src": "http://github.com/privatesky/dossier-explorer-wallet-prototype.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd dossier-explorer-wallet-prototype && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/web-wallet/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/web-wallet/loader && npm install"
+                }
+            ]
+        },
+        {
+            "name": "themes/clear-sky-theme",
+            "src": "https://github.com/PrivateSky/clear-sky-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/clear-sky-theme && npm install"
+                }
+            ]
+        },
+        {
+            "name": "themes/blue-fluorite-theme",
+            "src": "https://github.com/PrivateSky/blue-fluorite-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/blue-fluorite-theme && npm install"
+                }
+            ]
+        },
+        {
+            "name": "dossier-explorer-ssapp",
+            "src": "https://github.com/PrivateSky/dossier-explorer-ssapp.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd dossier-explorer-ssapp && npm install"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ],
+    "build": [
+        {
+            "name": "cardinal-wallet-build",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd cardinal && npm run build-dossier"
+                }
+            ]
+        },
+        {
+            "name": "blue-fluorite-theme-wallet-build",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/blue-fluorite-theme && npm run build-dossier"
+                }
+            ]
+        },
+        {
+            "name": "clear-sky-theme-wallet-build",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/clear-sky-theme && npm run build-dossier"
+                }
+            ]
+        },
+        {
+            "name": "secure-channels_bind_to_secure-channels-ssapp-prototype",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd secure-channels-ssapp-prototype && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./secure-channels-ssapp-prototype/seed",
+                    "target": "./web-server/secure-channels/apps-patch/secure-channels-ssapp/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/secure-channels/apps-patch/secure-channels-ssapp/readme"
+                }
+            ]
+        },
+        {
+            "name": "secure-channels_bind_to_profile-ssapp-prototype",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd profile-ssapp-prototype && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./profile-ssapp-prototype/seed",
+                    "target": "./web-server/secure-channels/apps-patch/profile-ssapp/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/secure-channels/apps-patch/profile-ssapp/readme"
+                }
+            ]
+        },
+        {
+            "name": "secure-channels_bind_to_menu-wallet-prototype",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd menu-wallet-prototype && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./menu-wallet-prototype/seed",
+                    "target": "./web-server/secure-channels/wallet-patch/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "web-wallet_bind_to_dossier-explorer-wallet-prototype",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd dossier-explorer-wallet-prototype && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./dossier-explorer-wallet-prototype/seed",
+                    "target": "./web-server/web-wallet/wallet-patch/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "web-wallet_bind_to_dossier-explorer-ssapp",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd dossier-explorer-ssapp && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./dossier-explorer-ssapp/seed",
+                    "target": "./web-server/web-wallet/apps-patch/dossier-explorer-ssapp/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/web-wallet/apps-patch/dossier-explorer-ssapp/readme"
+                }
+            ]
+        },
+        {
+            "name": "trust-loader-config",
+            "actions": [
+                {
+                    "type": "copy",
+                    "src": "./trust-loader-config",
+                    "target": "./web-server",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        }
+    ]
 }

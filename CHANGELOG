@@ -1,0 +1,22 @@
+# Changelog
+
+## [04.28.2020]
+
+### Fixed issue with service worker loosing state
+- Changed loader (web-dossier-loader)
+- Changed privatesky/swarm-engine,ssapp-middleware
+
+## [04.22.2020]
+
+### Implemented "watch" feature
+- Added bin/watcher/watcher.js wrapper helper script which executes the privatesky/watcher script
+- Added bin/watcher/write-timestamp.js script which generates a 'last-update.txt' file if changes were detected in the apps folders or the web-server folder. This file is used by the loader to detect changes and rebuild the wallet in development mode
+
+## [04.16.2020]
+
+### Implemented service worker brick caching
+
+- Added privatesky/psk-cache module
+- Changed privatesky dependencies & build configuration
+- Changed privatesky/bar,edfs
+- Updated swBoot.js in web-dossier-loader

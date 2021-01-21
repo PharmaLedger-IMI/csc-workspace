@@ -1,0 +1,9 @@
+{
+  "theme": "default",
+  "basePagesUrl": "/pages/",
+  "profile": {
+    "username": "Secure Channels",
+    "email": "sinica@axiologic.net",
+    "avatar": "/resources/images/cardinal.png"
+  }
+}
