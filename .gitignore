@@ -5,6 +5,12 @@
 # Ignore everything
 .idea/csc-workspace.iml
 
+# Ignore brick storage folder
+web-server/internal-volume
+# Ignore node modules folder
+node_modules/.package-lock.json
+
+
 # But not these files...
 !.gitignore
 !bin

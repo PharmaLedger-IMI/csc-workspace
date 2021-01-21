@@ -307,19 +307,6 @@
                     "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/web-wallet/apps-patch/dossier-explorer-ssapp/readme"
                 }
             ]
-        },
-        {
-            "name": "trust-loader-config",
-            "actions": [
-                {
-                    "type": "copy",
-                    "src": "./trust-loader-config",
-                    "target": "./web-server",
-                    "options": {
-                        "overwrite": true
-                    }
-                }
-            ]
         }
     ]
 }
