@@ -90,6 +90,30 @@
             ]
         },
         {
+            "name": "apihub-root/sponsor-wallet/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false,
+                    "commit": "6422446d3b605566362ed471b5d4a43c4dd8e252"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd apihub-root/sponsor-wallet/loader && npm install"
+                },
+                {
+                    "type": "copy",
+                    "src": "apihub-root/sponsor-wallet/loader/loader-config.local.json-template",
+                    "target": "apihub-root/sponsor-wallet/loader/loader-config.local.json",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
             "name": "apihub-root/leaflet-wallet/loader",
             "src": "http://github.com/privatesky/web-dossier-loader.git",
             "actions": [
@@ -429,6 +453,36 @@
             ]
         },
         {
+            "name": "sponsor-wallet_bind_to_sponsor-ssapp",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd sponsor-ssapp && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./sponsor-ssapp/seed",
+                    "target": "./apihub-root/sponsor-wallet/apps-patch/sponsor-ssapp/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "copy",
+                    "src": "./sponsor-ssapp/seed",
+                    "target": "./apihub-root/sponsor-wallet/wallet-patch/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./apihub-root/sponsor-wallet/apps-patch/sponsor-ssapp/readme"
+                }
+            ]
+        },
+        {
             "name": "dsu-explorer_bind_to_dossier-explorer-ssapp",
             "src": "",
             "actions": [
@@ -539,6 +593,10 @@
                 {
                     "type": "execute",
                     "cmd": "cd apihub-root/leaflet-wallet/loader && npm install"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd apihub-root/sponsor-wallet/loader && npm install"
                 },
                 {
                     "type": "execute",
@@ -684,6 +742,11 @@
                 },
                 {
                     "type": "copy",
+                    "src": "apihub-root/sponsor-wallet",
+                    "target": "mobile/scan-app/android/app/src/main/assets/nodejs-project/apihub-root/app"
+                },
+                {
+                    "type": "copy",
                     "src": "apihub-root/leaflet-wallet",
                     "target" : "mobile/scan-app/android/app/src/main/assets/nodejs-project/apihub-root/app"
                 },
@@ -740,6 +803,11 @@
                 {
                     "type": "copy",
                     "src": "apihub-root/leaflet-wallet",
+                    "target": "mobile/scan-app/ios/PSKNodeServer/PSKNodeServer/nodejsProject/apihub-root/app"
+                },
+                {
+                    "type": "copy",
+                    "src": "apihub-root/sponsor-wallet",
                     "target": "mobile/scan-app/ios/PSKNodeServer/PSKNodeServer/nodejsProject/apihub-root/app"
                 },
                 {
