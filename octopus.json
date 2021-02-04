@@ -75,6 +75,21 @@
             ]
         },
         {
+            "name": "sponsor-ssapp",
+            "src": "https://github.com/PharmaLedger-IMI/sponsor-ssapp.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd sponsor-ssapp && npm install"
+                }
+            ]
+        },
+        {
             "name": "apihub-root/leaflet-wallet/loader",
             "src": "http://github.com/privatesky/web-dossier-loader.git",
             "actions": [
