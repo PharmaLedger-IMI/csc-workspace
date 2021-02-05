@@ -8,4 +8,4 @@ echo "Build changes.."
 npm run build-all
 
 echo "Open incognito localhost window on port ${SERVER_PORT}.."
-open -na "Google Chrome" --args --incognito "http://localhost:${SERVER_PORT}/leaflet-wallet/loader"
+open -na "Google Chrome" --args --incognito "http://localhost:${SERVER_PORT}/sponsor-wallet/loader"

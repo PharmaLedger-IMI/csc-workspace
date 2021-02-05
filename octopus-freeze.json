@@ -635,6 +635,15 @@
                     "cmd": "cd apihub-root/leaflet-wallet/loader && npm run build"
                 }
             ]
+        },
+        {
+            "name": "sponsor-wallet-loader-build",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd apihub-root/sponsor-wallet/loader && npm run build"
+                }
+            ]
         }
     ],
     "install-mobile": [
