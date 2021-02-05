@@ -63,22 +63,6 @@
             ]
         },
         {
-            "name": "leaflet-ssapp",
-            "src": "https://github.com/PharmaLedger-IMI/leaflet-ssapp.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false,
-                    "commit": "0691d437a86b4bee014f081a2bf46d1642158479"
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd leaflet-ssapp && npm install"
-                }
-            ]
-        },
-        {
             "name": "sponsor-ssapp",
             "src": "https://github.com/PharmaLedger-IMI/sponsor-ssapp.git",
             "actions": [
@@ -90,30 +74,6 @@
                 {
                     "type": "execute",
                     "cmd": "cd sponsor-ssapp && npm install"
-                }
-            ]
-        },
-        {
-            "name": "apihub-root/leaflet-wallet/loader",
-            "src": "http://github.com/privatesky/web-dossier-loader.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false,
-                    "commit": "6422446d3b605566362ed471b5d4a43c4dd8e252"
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd apihub-root/leaflet-wallet/loader && npm install"
-                },
-                {
-                    "type": "copy",
-                    "src": "apihub-root/leaflet-wallet/loader/loader-config.local.json-template",
-                    "target": "apihub-root/leaflet-wallet/loader/loader-config.local.json",
-                    "options": {
-                        "overwrite": true
-                    }
                 }
             ]
         },
@@ -494,36 +454,6 @@
             ]
         },
         {
-            "name": "leaflet-wallet_bind_to_leaflet-ssapp",
-            "src": "",
-            "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "cd leaflet-ssapp && npm run build"
-                },
-                {
-                    "type": "copy",
-                    "src": "./leaflet-ssapp/seed",
-                    "target": "./apihub-root/leaflet-wallet/apps-patch/leaflet-ssapp/seed",
-                    "options": {
-                        "overwrite": true
-                    }
-                },
-                {
-                    "type": "copy",
-                    "src": "./leaflet-ssapp/seed",
-                    "target": "./apihub-root/leaflet-wallet/wallet-patch/seed",
-                    "options": {
-                        "overwrite": true
-                    }
-                },
-                {
-                    "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./apihub-root/leaflet-wallet/apps-patch/leaflet-ssapp/readme"
-                }
-            ]
-        },
-        {
             "name": "sponsor-wallet_bind_to_sponsor-ssapp",
             "src": "",
             "actions": [
@@ -611,10 +541,6 @@
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd apihub-root/leaflet-wallet/loader && npm install"
-                },
-                {
-                    "type": "execute",
                     "cmd": "cd apihub-root/sponsor-wallet/loader && npm install"
                 },
                 {
@@ -624,15 +550,6 @@
                 {
                     "type": "execute",
                     "cmd": "cd apihub-root/dsu-explorer/loader && npm install"
-                }
-            ]
-        },
-        {
-            "name": "leaflet-wallet-loader-build",
-            "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "cd apihub-root/leaflet-wallet/loader && npm run build"
                 }
             ]
         },
@@ -768,11 +685,6 @@
                 },
                 {
                     "type": "copy",
-                    "src": "apihub-root/leaflet-wallet",
-                    "target": "mobile/scan-app/android/app/src/main/assets/nodejs-project/apihub-root/app"
-                },
-                {
-                    "type": "copy",
                     "src": "apihub-root/sponsor-wallet",
                     "target": "mobile/scan-app/android/app/src/main/assets/nodejs-project/apihub-root/app"
                 },
@@ -825,11 +737,6 @@
                     "type": "copy",
                     "src": "apihub-root/external-volume",
                     "target": "mobile/scan-app/ios/PSKNodeServer/PSKNodeServer/nodejsProject/apihub-root/external-volume"
-                },
-                {
-                    "type": "copy",
-                    "src": "apihub-root/leaflet-wallet",
-                    "target": "mobile/scan-app/ios/PSKNodeServer/PSKNodeServer/nodejsProject/apihub-root/app"
                 },
                 {
                     "type": "copy",
