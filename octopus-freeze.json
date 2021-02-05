@@ -102,26 +102,6 @@
             ]
         },
         {
-            "name": "apihub-root/dsu-fabric-wallet/loader",
-            "src": "http://github.com/privatesky/web-dossier-loader.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false,
-                    "commit": "6422446d3b605566362ed471b5d4a43c4dd8e252"
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd apihub-root/dsu-fabric-wallet/loader && npm install"
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd apihub-root/dsu-fabric-wallet/loader && npm run build"
-                }
-            ]
-        },
-        {
             "name": "themes/citrus-theme",
             "src": "http://github.com/privatesky/citrus-theme.git",
             "actions": [
@@ -324,22 +304,6 @@
                     "cmd": "cd ethereum-anchoring/SmartContract && npm install"
                 }
             ]
-        },
-        {
-            "name": "dsu-fabric-ssapp",
-            "src": "https://github.com/PharmaLedger-IMI/dsu-fabric-ssapp.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false,
-                    "commit": "bfdaa2322cbccc194a790d07f9be98fddd45a0a5"
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd dsu-fabric-ssapp && npm install"
-                }
-            ]
         }
     ],
     "build": [
@@ -484,46 +448,6 @@
             ]
         },
         {
-            "name": "dsu-fabric-wallet_bind_to_menu-wallet-prototype",
-            "src": "",
-            "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "cd menu-wallet-prototype && npm run build"
-                },
-                {
-                    "type": "copy",
-                    "src": "./menu-wallet-prototype/seed",
-                    "target": "./apihub-root/dsu-fabric-wallet/wallet-patch/seed",
-                    "options": {
-                        "overwrite": true
-                    }
-                }
-            ]
-        },
-        {
-            "name": "dsu-fabric-wallet_bind_to_dsu-fabric-ssapp",
-            "src": "",
-            "actions": [
-                {
-                    "type": "execute",
-                    "cmd": "cd dsu-fabric-ssapp && npm run build"
-                },
-                {
-                    "type": "copy",
-                    "src": "./dsu-fabric-ssapp/seed",
-                    "target": "./apihub-root/dsu-fabric-wallet/apps-patch/dsu-fabric-ssapp/seed",
-                    "options": {
-                        "overwrite": true
-                    }
-                },
-                {
-                    "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./apihub-root/dsu-fabric-wallet/apps-patch/dsu-fabric-ssapp/readme"
-                }
-            ]
-        },
-        {
             "name": "trust-loader-config",
             "actions": [
                 {
@@ -542,10 +466,6 @@
                 {
                     "type": "execute",
                     "cmd": "cd apihub-root/sponsor-wallet/loader && npm install"
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd apihub-root/dsu-fabric-wallet/loader && npm install"
                 },
                 {
                     "type": "execute",
