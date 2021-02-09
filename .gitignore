@@ -1,9 +1,12 @@
+.idea
 cardinal
 mobile/scan-app
 privatesky
 menu-wallet-prototype
 leaflet-ssapp
 apihub-root/leaflet-wallet/loader
+apihub-root/sponsor-wallet/loader
+sponsor-ssapp
 apihub-root/dsu-fabric-wallet/loader
 themes
 dossier-explorer-wallet-prototype
