@@ -440,6 +440,16 @@
             ]
         },
         {
+            "name": "csc-theme-wallet-build",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/csc-theme && npm run build-dossier"
+                }
+            ]
+        },
+        {
             "name": "dossier-explorer-wallet-prototype-build",
             "src": "",
             "actions": [
