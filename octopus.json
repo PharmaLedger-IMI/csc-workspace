@@ -218,7 +218,9 @@
                 {
                     "type": "smartClone",
                     "target": ".",
-                    "collectLog": false
+                    "collectLog": false,
+                    "type": "execute",
+                    "cmd": "cd themes/csc-theme && npm install"
                 }
             ]
         },
