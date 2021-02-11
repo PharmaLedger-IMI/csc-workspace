@@ -162,6 +162,17 @@
             ]
         },
         {
+            "name": "themes/csc-theme",
+            "src": "https://github.com/PharmaLedger-IMI/csc-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false,
+                }
+            ]
+        },
+        {
             "name": "dossier-explorer-wallet-prototype",
             "src": "https://github.com/PrivateSky/dossier-explorer-wallet-prototype.git",
             "actions": [
