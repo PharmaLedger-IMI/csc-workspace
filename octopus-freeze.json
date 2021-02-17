@@ -102,6 +102,45 @@
             ]
         },
         {
+            "name": "clinical-resource-ssapp",
+            "src": "https://github.com/PharmaLedger-IMI/clinical-resource-ssapp.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd clinical-resource-ssapp && npm install"
+                }
+            ]
+        },
+        {
+            "name": "apihub-root/clinical-resource-wallet/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false,
+                    "commit": "6422446d3b605566362ed471b5d4a43c4dd8e252"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd apihub-root/clinical-resource-wallet/loader && npm install"
+                },
+                {
+                    "type": "copy",
+                    "src": "apihub-root/clinical-resource-wallet/loader/loader-config.local.json-template",
+                    "target": "apihub-root/clinical-resource-wallet/loader/loader-config.local.json",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
             "name": "themes/citrus-theme",
             "src": "http://github.com/privatesky/citrus-theme.git",
             "actions": [
@@ -469,6 +508,36 @@
             ]
         },
         {
+            "name": "clinical-resource-wallet_bind_to_clinical-resource-ssapp",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd clinical-resource-ssapp && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./clinical-resource-ssapp/seed",
+                    "target": "./apihub-root/clinical-resource-wallet/apps-patch/clinical-resource-ssapp/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "copy",
+                    "src": "./clinical-resource-ssapp/seed",
+                    "target": "./apihub-root/clinical-resource-wallet/wallet-patch/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./apihub-root/clinical-resource-wallet/apps-patch/clinical-resource-ssapp/readme"
+                }
+            ]
+        },
+        {
             "name": "trust-loader-config",
             "actions": [
                 {
@@ -490,6 +559,10 @@
                 },
                 {
                     "type": "execute",
+                    "cmd": "cd apihub-root/clinical-resource-wallet/loader && npm install"
+                },
+                {
+                    "type": "execute",
                     "cmd": "cd apihub-root/dsu-explorer/loader && npm install"
                 }
             ]
@@ -500,6 +573,15 @@
                 {
                     "type": "execute",
                     "cmd": "cd apihub-root/sponsor-wallet/loader && npm run build"
+                }
+            ]
+        },
+        {
+            "name": "clinical-resource-wallet-loader-build",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd apihub-root/clinical-resource-wallet/loader && npm run build"
                 }
             ]
         }
@@ -630,6 +712,11 @@
                     "target": "mobile/scan-app/android/app/src/main/assets/nodejs-project/apihub-root/app"
                 },
                 {
+                    "type": "copy",
+                    "src": "apihub-root/clinical-resource-wallet",
+                    "target": "mobile/scan-app/android/app/src/main/assets/nodejs-project/apihub-root/app"
+                },
+                {
                     "type": "remove",
                     "target": "mobile/scan-app/android/app/src/main/assets/nodejs-project/apihub-root/app/loader/node_modules"
                 },
@@ -682,6 +769,11 @@
                 {
                     "type": "copy",
                     "src": "apihub-root/sponsor-wallet",
+                    "target": "mobile/scan-app/ios/PSKNodeServer/PSKNodeServer/nodejsProject/apihub-root/app"
+                },
+                {
+                    "type": "copy",
+                    "src": "apihub-root/clinical-resource-wallet",
                     "target": "mobile/scan-app/ios/PSKNodeServer/PSKNodeServer/nodejsProject/apihub-root/app"
                 },
                 {
