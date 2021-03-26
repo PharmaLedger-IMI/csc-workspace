@@ -1,0 +1,8 @@
+    Changing sponsor repo from epi-theme to csc-theme
+    Initial Commit
+    Changing sponsor repo from epi-theme to csc-theme
+    Addings files and directories from epi-theme
+    Changing sponsor repo from epi-theme to csc-theme
+    Changing sponsor repo from epi-theme to csc-theme
+    Adding Changess to Dashboard page
+    Changes to the button, img, mobile
