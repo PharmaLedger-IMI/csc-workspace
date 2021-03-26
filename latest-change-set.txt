@@ -1,8 +1,41 @@
-    Changing sponsor repo from epi-theme to csc-theme
-    Initial Commit
-    Changing sponsor repo from epi-theme to csc-theme
-    Addings files and directories from epi-theme
-    Changing sponsor repo from epi-theme to csc-theme
-    Changing sponsor repo from epi-theme to csc-theme
+
     Adding Changess to Dashboard page
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Initial commit
+    Adding Changess to Dashboard page
+    Adding Changess to Dashboard page
+    initial commit; populating from sponsor-ssapp
     Changes to the button, img, mobile
+    Adding Changess to Dashboard page
+    initial commit; populating from sponsor-ssapp
+
